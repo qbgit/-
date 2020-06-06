@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TEST CSRF</title>
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+var url="http://localhost:9090/resolutionget?vid=0";
+$.ajax({
+    url:url,
+    type:'GET',
+    //data:'userId=root&password=root',
+    success:function (data) {
+        alert(data);
+    },
+    error:function (xhr,status,error) {
+        alert(status);
+        alert(error);
+    }
+});
+</script>
+</head>
+<body>
+</body>
+</html>
